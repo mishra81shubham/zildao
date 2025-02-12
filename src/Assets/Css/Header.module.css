@@ -1,0 +1,304 @@
+:root {
+    --primaryColor: #ffc72b;
+    --secondaryColor: #ff0058;
+    --textColor: #fff;
+    --gradientBgColor: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 242, 206, 1) 100%
+    );
+    --mainBgColor: #0b0e13;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    font-family: "Outfit", sans-serif;
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  .homeHeader .nav {
+    width: 100%;
+    background-color: var(--mainBgColor);
+    display: flex;
+    align-items: center;
+    padding: 25px 100px;
+    box-shadow: 0 8px 77px #000000b5;
+  }
+  .homeHeader .nav > .navHeader {
+    flex: 1;
+  }
+  .homeHeader .nav > .navList {
+    display: flex;
+    gap: 20px;
+    margin: 0px;
+    align-items: center;
+    z-index: 9999;
+  }
+  .homeHeader .nav > .navList > li {
+    list-style-type: none;
+  }
+  .homeHeader .nav > .navList > li a {
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .homeHeader .nav > #navCheck {
+    display: none;
+  }
+  @media (max-width: 480px) {
+    .homeHeader .nav {
+      padding: 1rem;
+    }
+    .homeHeader .nav > .navBtn {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-top: 0.2rem;
+    }
+    .homeHeader .nav > .navBtn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .homeHeader .nav > .navBtn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #000;
+    }
+    .homeHeader .nav > .navList {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      width: 100%;
+      background-color: #fff;
+      height: 0;
+      transition: all 0.3s ease-in;
+      top: 40px;
+      left: 0;
+      overflow: hidden;
+    }
+    .homeHeader .nav > .navList > li {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    .homeHeader .nav > #navCheck:checked ~ .navList {
+      height: calc(80vh - 50px);
+      margin-top: 30px;
+    }
+  }
+  
+  .homeHeader .homeHeaderLogo {
+    width: 41px;
+    height: 44px;
+    margin-right: 10px;
+  }
+  
+  .homeHeader .homeHeaderCompanyName {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0px;
+    color: var(--textColor);
+  }
+  .homeHeader .homeHeaderLogoCard {
+    display: flex;
+    align-items: center;
+  }
+  
+  .homeHeader .homeHeaderSignupLink {
+    background-color: var(--secondaryColor);
+    color: #fff !important;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .homeHeader .loginNavList {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0px;
+    margin-left: 30px;
+  }
+  
+  .homeHeader .loginNavList li {
+    list-style: none;
+  }
+  
+  .homeHeader .loginNavList li a {
+    cursor: pointer;
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  /* DeliveryBoy Signup start Here  */
+  
+  .deliverySignupPolicyCheck {
+    color: var(--primaryColor);
+  }
+  
+  .deliveryBoySignupCustomCheckbox .form-check-input:checked {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+  
+  .deliveryBoySignupCheckboxCard {
+    display: flex;
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Dropdown button */
+  .dropdownToggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    color: var(--textColor);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  /* Icon next to dropdown button */
+  .iconDrop {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Dropdown menu */
+  .dropdownHover:hover .dropdownMenu {
+    display: block;
+  }
+  
+  .dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .dropdownMenu li {
+    padding: 10px;
+  }
+  
+  .dropdownMenu li a {
+    text-decoration: none;
+    color: var(--textColor);
+  }
+  
+  .dropdownMenu li a:hover {
+    color: var(--secondaryColor);
+  }
+  
+  .headGetTouchBtn {
+    background-color: var(--secondaryColor);
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  .flagIcon {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  
+  .customSingleValue {
+    display: flex;
+    align-items: center;
+  }
+  
+  .customOption {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .languageDropdown {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 5px;
+    gap: 10px;
+  }
+  
+  .customSelect {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .customSelect:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--secondaryColor);
+  }
+  .customSelect:hover {
+    border-color: var(--secondaryColor);
+    /* background-color: var(--primaryColor);  */
+  }
+  
+  .flagContainer {
+    margin-left: 3px;
+  }
+  
+  .flagIcon {
+    width: 100%;
+    height: 40%;
+    border-radius: 3px;
+  }
+  
+  .customSelect option:checked {
+    background-color: var(
+      --secondaryColor
+    ); /* Selected option background color */
+    color: #fff; /* Selected option text color */
+  }
+  
+  /* Mobile Responsive Start Here  */
+  
+  @media (max-width: 768px) {
+    .headerOffterCard {
+      display: none;
+    }
+  }
+  

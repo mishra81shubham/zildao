@@ -1,0 +1,649 @@
+:root {
+  --primaryColor: #ffc72b;
+  --secondaryColor: #ff0058;
+  --textColor: #fff;
+  --blackColor: #000;
+  --gradientBgColor: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 242, 206, 1) 100%
+  );
+  --mainBgColor: #0b0e13;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--blackColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.bannerMainSection {
+  background-image: url(../Images/MainBanner.png);
+  min-height: 900px;
+  padding-top: 180px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerContentCard h1 {
+  font-size: 80px;
+  color: var(--textColor);
+  margin-bottom: 30px;
+}
+
+.bannerContentCard p {
+  font-size: 16px;
+  color: var(--textColor);
+}
+
+.bannerContentCard .btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.bannerContentCard .btns .blcBtn {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--textColor);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.btns .blcBtn:before,
+.btns .blcBtn:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(../Images/btn-border.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btns .blcBtn:hover::after {
+  background-image: url(../Images/btn-border-hover.svg);
+}
+
+.bannerContentCard .btns .blcBtnNext {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--textColor);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContentCard .btns .blcBtnNext:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(../Images/btn-border-white.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.bannerContentCard .btns .blcBtnNext:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.bannerContentCard .btns .blcBtnNext:hover::after {
+  background-image: url(../Images/btn-border.svg);
+}
+
+.btns .blcBtn:hover {
+  transform: translateY(-2px);
+  color: var(--textColor);
+}
+
+.bannerContentCard .btns .blcBtnNext:hover {
+  transform: translateY(-2px);
+  color: var(--textColor);
+}
+
+.bannerSideIconsMainCard {
+  position: relative;
+}
+
+.bannerSideIconCard1 {
+  top: 0px;
+  left: 25%;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.bannerSideIconCard1 span {
+  display: inline-block;
+  -webkit-transform: translate(32px, -10px);
+  -ms-transform: translate(32px, -10px);
+  transform: translate(32px, -10px);
+  margin-right: 5px;
+  color: var(--textColor);
+}
+
+.bannerSideIconCard2 {
+  bottom: -400px;
+  left: 4%;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.bannerSideIconCard2 span {
+  display: inline-block;
+  -webkit-transform: translate(32px, -10px);
+  -ms-transform: translate(32px, -10px);
+  transform: translate(32px, -10px);
+  margin-right: 5px;
+  color: var(--textColor);
+}
+
+.bannerSideIconCard3 {
+  top: -40px;
+  right: -43%;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.bannerSideIconCard3 span {
+  display: inline-block;
+  -webkit-transform: translate(32px, -10px);
+  -ms-transform: translate(32px, -10px);
+  transform: translate(32px, -10px);
+  margin-right: 5px;
+  color: var(--textColor);
+}
+
+.bannerSideIconCard4 {
+  bottom: -400px;
+  right: -22%;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.bannerSideIconCard4 span {
+  display: inline-block;
+  -webkit-transform: translate(32px, -10px);
+  -ms-transform: translate(32px, -10px);
+  transform: translate(-25px, -10px);
+  margin-right: 5px;
+  color: var(--textColor);
+}
+
+.userOptionsTextCard {
+  text-align: center;
+}
+
+.userOptionsTextCard h1 {
+  font-size: 50px;
+  color: var(--textColor);
+  margin-bottom: 30px;
+}
+
+.userOptionsTextCard p {
+  font-size: 18px;
+  color: var(--textColor);
+}
+
+.userOptionsMainSection {
+  padding: 60px 0px;
+  background-color: var(--blackColor);
+}
+
+.userOptionsPersonalCard {
+  background-image: url(../Images/personalCard.svg);
+  background-position: center 17px;
+  background-repeat: no-repeat;
+  background-position-x: -39px;
+  padding: 50px 45px 50px 50px;
+  position: relative;
+}
+
+.userOptionsPersonalCard:before {
+  position: absolute;
+  top: 46px;
+  left: 2px;
+  width: 54px;
+  height: 64px;
+  content: "";
+  background-color: #fff;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.userOptionsPersonalIcon {
+  bottom: -22px;
+  left: -38px;
+  position: relative;
+}
+
+.userOptionsPersonalIcon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.userOptionsPersonalCard h3 {
+  color: var(--textColor);
+  font-size: 22px;
+}
+
+.userOptionsPersonalListCard {
+  margin-top: 30px;
+  padding-left: 0px;
+}
+
+.userOptionsPersonalListCard li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.userOptionsPersonalListCard li {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+.userOptionsPersonalListCard li span img {
+  max-width: 100%;
+  height: auto;
+}
+
+.userOptionsPersonalListCard li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.userOptionsPersonalListCard li h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--textColor);
+}
+
+.userOptionsPersonalListCard li p {
+  font-size: 14px;
+  color: var(--textColor);
+  text-transform: capitalize;
+}
+
+.userOptionsMiddleCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.userOptionsCommercialCard {
+  background-image: url(../Images/ui_bg2.svg);
+  background-position: center 17px;
+  background-repeat: no-repeat;
+  padding: 50px 45px 50px 50px;
+  position: relative;
+}
+
+.userOptionsCommercialCard:before {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  top: auto;
+  bottom: 28px;
+  width: 54px;
+  height: 64px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  content: "";
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.userOptionsCommercialCard h3 {
+  color: var(--textColor);
+  font-size: 22px;
+}
+
+.userOptionsRowCard {
+  display: flex;
+  align-items: center;
+}
+
+.blockchainAddressingSection {
+  padding: 60px 0px;
+  background-color: var(--blackColor);
+}
+
+.blockchainAddressingImgCard {
+  z-index: 1;
+  position: relative;
+  text-align: center !important;
+}
+
+.blockchainAddressingImgCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blockchainAddressingBgShapeCard {
+  left: -62px;
+  top: 40%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.blockchainAddressingBgShapeSecond {
+  right: 76px;
+  top: 54%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.blockchainAddressingLockIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blockchainAddressingLockIcon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blockchainAddressingTextCard h2 {
+  font-size: 50px;
+  color: var(--textColor);
+  margin-bottom: 25px;
+}
+
+.blockchainAddressingTextCard p {
+  font-size: 18px;
+  color: var(--textColor);
+}
+
+.blockchainAddressingTextCard {
+  margin-bottom: 40px;
+}
+
+.blockchainAboutListCard {
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.blockchainAboutListCard li {
+  width: 50%;
+  letter-spacing: -0.54px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--textColor);
+  margin-top: 20px;
+}
+
+.blockchainAboutListCard li img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.ourAdvantagesMainSection {
+  padding: 60px 0px;
+  background-color: var(--blackColor);
+  background-image: url(../Images/advantages_bg.png);
+  background-repeat: no-repeat;
+  background-position: center 83%;
+  padding: 100px 0px;
+}
+
+.ourAdvantagesTextCard {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ourAdvantagesTextCard h2 {
+  font-size: 50px;
+  color: var(--textColor);
+  margin-bottom: 25px;
+}
+
+.ourAdvantagesTextCard p {
+  font-size: 18px;
+  color: var(--textColor);
+}
+
+.blockchainSolutionMainTextCard h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: var(--textColor);
+}
+
+.blockchainSolutionMainTextCard p {
+  font-size: 18px;
+  color: var(--textColor);
+}
+
+.blockchainSolutionMainTextCard {
+  margin-bottom: 50px;
+}
+
+.blockchainSolutionSectionCard {
+  padding: 60px 0px;
+  background-color: var(--blackColor);
+}
+
+.blockchainSolutionListCard {
+  padding-left: 0;
+  list-style: none;
+}
+
+.blockchainSolutionListCard li {
+  padding-left: 68px;
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  display: inline-block;
+  min-width: 505px;
+  z-index: 1;
+}
+
+.blockchainSolutionListCard li:before {
+  width: 100%;
+  opacity: 0;
+}
+.blockchainSolutionListCard li:before,
+.blockchainSolutionListCard li:after {
+  position: absolute;
+  content: "";
+  background-color: #262932;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.blockchainSolutionListIconCard {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.blockchainSolutionListIconCard::before {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(38, 41, 50);
+  content: "";
+  z-index: -1;
+  top: -4px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.blockchainSolutionListIconCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blockchainSolutionListCard li h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.54px;
+  color: var(--textColor);
+}
+
+.blockchainSolutionListCard li p {
+  font-size: 14px;
+  color: var(--textColor);
+  margin-bottom: 0px;
+}
+
+.blockchainSolutionListCard li::after {
+  background-color: rgb(21, 183, 133);
+  width: 0px;
+}
+
+.blockchainSolutionListCard li::before,
+.blockchainSolutionListCard li::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(38, 41, 50);
+  width: 0%;
+  height: 2px;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.5s;
+}
+
+.blockchainSolutionListCard li:hover::after {
+  width: 100%;
+  transition-delay: 0.3s;
+  background-color: rgb(21, 183, 133);
+}
+
+.blockchainSolutionImagesCard {
+  margin-left: -70px;
+  margin-right: -34px;
+  z-index: 0;
+  position: relative;
+}
+
+.blockchainSolutionImagesCard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.solutionsCricleImagesCard .img {
+  max-width: 100%;
+  height: auto;
+}
+
+.solutionsCricleImagesCard .cricleCardFirst {
+  top: 4%;
+  left: 44%;
+  position: absolute;
+  z-index: -1;
+}
+
+.solutionsCricleImagesCard .cricleCardSecond {
+  bottom: 1%;
+  left: 12%;
+  position: absolute;
+  z-index: -1;
+}
+
+.solutionsCricleImagesCard .cricleCardThird {
+  bottom: 6%;
+  right: 5%;
+  position: absolute;
+  z-index: -1;
+}
+
+.fingerPrintIconCard {
+  position: absolute;
+  top: 53%;
+  left: 56%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.fingerPrintIconCard img{
+  max-width: 100%;
+  height: auto;
+}
